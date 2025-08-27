@@ -1,200 +1,360 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;700&display=swap');
 
+/* Variáveis de Estilo */
 :root {
-    --laranja-claro: #FF862A;
-    --alto-contraste-fundo: #000000;
-    --alto-contraste-texto: #ffffff;
-    --alto-contraste-link: #ffd700;
+    --primary-bg: #0c0c0c;
+    --secondary-bg: #1a1a1a;
+    --text-color: #f5f5f5;
+    --brand-red: #e50914;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+
+    /* Cores dos Personagens e Grupos */
+    --cor-homelander: #fff;
+    --cor-starlight: #f3e58c;
+    --cor-maeve: #c00d44;
+    --cor-a-train: #0080ff;
+    --cor-black-noir: #202020;
+    --cor-billy-butcher: #888;
+    --cor-hughie: #00aaff;
+    --cor-mother-milk: #ff6600;
+    --cor-frenchie: #8c8c8c;
+    --cor-the-seven: #fff;
+    --cor-the-boys: #888;
+
+    /* Cores do Gavião */
+    --gaviao-color: #fff;
+    --gaviao-clicado-color: var(--brand-red);
+    --gaviao-clicado-bg: #fff;
+}
+
+/* Estilos Gerais e Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
     font-size: 1rem;
-    font-family: 'Montserrat';
+    overflow-x: hidden;
 }
 
-header {
-    background-color: #ffffff;
-}
-
-
-section {
-    padding-bottom: 5rem;
-}
-
-
-.nav-link {
-    color: #CB6D43;
-    font-weight: 600;
-}
-
-.inicio-fundo {
-    /* aula 3 */
-    background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    background-position: right;
-    border-radius: 80px;
-    width: 100%;
-    height: 606px;
-    padding: 40px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* posicionamento para a imagem à direita */
-.img-inicio {
+/* Link para pular conteúdo */
+.skip-link {
     position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -99;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
     height: auto;
+    background-color: var(--brand-red);
+    color: #fff;
+    padding: 5px;
 }
 
-
-.esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-
-.botao-inicio {
-    background-color: var(--laranja-claro);
-    border-radius: 30px;
-    border: none;
-    width: 14em;
-    height: 3em;
-    align-content: center;
-
-}
-
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
-}
-
-
-#tropicalia {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
-}
-
-#tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
-}
-
-
-h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
-}
-
-#galeria {
-    background-color: #FAF4F4;
-
-}
-
-.fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
-}
-
-#contato {
-    background-image: url('img/4965007.jpg');
-    background-size: cover;
-    padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
-}
-
-.formulario {
-    background-color: #ffffff;
-    padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
-    border-radius: 10px;
-    /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
-    font-weight: bold;
-}
-
-.formulario button {
-    background-color: #CB6D43;
-    border: none;
-    font-weight: bold;
-}
-
-.form-control {
-    background-color: #F1EDEF;
-}
-.menu-acessibilidade{
-    position: fixed;
-    top:2rem;
-    right:20px;
+/* Header */
+.site-header {
+    background-color: var(--secondary-bg);
+    padding: 1.5rem 0;
+    border-bottom: 2px solid var(--brand-red);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-.rotacao-botao{
-    transform: rotate(-90deg);
-    transform-origin: right center;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.opcoes-acessibilidade{
-    margin-top:10px;
+.logo {
+    height: 50px;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.site-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: var(--brand-red);
+}
+
+/* Menu de Acessibilidade */
+#acessibilidade-menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
-.opcoes-acessibilidade button{
-    margin-bottom: 5px;
+#gaviao-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
 }
-.apresenta-lista{
+
+.gaviao-icon {
+    width: 45px;
+    height: 45px;
+    fill: var(--gaviao-color);
+    border-radius: 50%;
+    padding: 5px;
+    transition: fill 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+#gaviao-btn.clicado .gaviao-icon {
+    fill: var(--gaviao-clicado-bg);
+    background-color: var(--gaviao-clicado-color);
+    transform: rotate(180deg);
+}
+
+#opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hidden {
     display: none;
 }
 
-.alto-contraste{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+#opcoes-acessibilidade button {
+    background-color: var(--brand-red);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.alto-contraste header,
-.alto-contraste footer,
-.alto-contraste .formulario{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+#opcoes-acessibilidade button:hover {
+    background-color: #c90812;
+    transform: scale(1.05);
 }
 
-.alto-contraste .nav-link{
-    color: var(--alto-contraste-link);
+/* Seção Hero */
+.hero {
+    background: url('images/the-boys-fundo.webp') no-repeat center center/cover;
+    text-align: center;
+    padding: 12rem 0;
+    position: relative;
 }
 
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary{
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.alto-contraste #tropicalia {
-    background: none;
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
-.alto-contraste #galeria {
-    background-color: var(--alto-contraste-fundo);
+.hero h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 4.5rem;
+    color: var(--brand-red);
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    text-transform: uppercase;
 }
-.alto-contraste .fundo-galeria {
-    background: none;
+
+.the-boys-title {
+    color: var(--cor-the-boys);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Seções de Personagens e Grupos */
+.personagens-section {
+    padding: 5rem 0;
+    background-color: var(--secondary-bg);
+    text-align: center;
+}
+
+.personagens-section h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    color: var(--brand-red);
+    margin-bottom: 3rem;
+}
+
+.grupo-the-seven {
+    color: var(--cor-the-seven);
+}
+
+.grupo-the-boys {
+    color: var(--cor-the-boys);
+}
+
+.personagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.personagem-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personagem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(229, 9, 20, 0.5);
+}
+
+.personagem-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.personagem-card .descricao {
+    padding: 1.5rem;
+}
+
+.personagem-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Cores dos nomes dos personagens */
+.nome-homelander { color: var(--cor-homelander); }
+.nome-starlight { color: var(--cor-starlight); }
+.nome-maeve { color: var(--cor-maeve); }
+.nome-a-train { color: var(--cor-a-train); }
+.nome-black-noir { color: var(--cor-black-noir); }
+.nome-billy-butcher { color: var(--cor-billy-butcher); }
+.nome-hughie { color: var(--cor-hughie); }
+.nome-mother-milk { color: var(--cor-mother-milk); }
+.nome-frenchie { color: var(--cor-frenchie); }
+
+/* Seção de Contato */
+.contato-section {
+    background-color: var(--primary-bg);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.contato-section h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    color: var(--brand-red);
+    margin-bottom: 3rem;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.contato-form label {
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.contato-form input,
+.contato-form textarea {
+    background-color: #444;
+    border: 1px solid #666;
+    color: var(--text-color);
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    background-color: #555;
+    border-color: var(--brand-red);
+    outline: none;
+}
+
+.contato-form button {
+    background-color: var(--brand-red);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contato-form button:hover {
+    background-color: #c90812;
+    transform: scale(1.02);
+}
+
+/* Rodapé */
+.site-footer {
+    background-color: var(--brand-red);
+    text-align: center;
+    padding: 1.5rem;
+    color: #fff;
+    font-weight: bold;
 }
