@@ -29,15 +29,15 @@
                 </ul>
             </nav>
             <div id="acessibilidade-menu">
-                <button id="gaviao-btn" aria-label="Menu de Acessibilidade" aria-expanded="false">
-                    <svg class="gaviao-icon" xmlns="C:\Users\anos_iniciais\Downloads\the boys\pluma.png" viewBox="0 0 512 512">
+                <button id="gaviao-btn" aria-label="Menu de Acessibilidade" aria-expanded="false" aria-controls="opcoes-acessibilidade">
+                    <svg class="gaviao-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM294.5 100.2c-11.4-8-26.1-8.4-37.9-1.2l-64 38.4c-12.7 7.6-19.9 22.1-18.4 37.7S198.8 200 214.3 200H272c17.7 0 32-14.3 32-32s-14.3-32-32-32H240l28.5-17.1c6.5-3.9 14.3-3.6 20.5 .8s9.6 11.2 9.6 18.2V272c0 26.5-21.5 48-48 48H160c-17.7 0-32 14.3-32 32s14.3 32 32 32h80c53 0 96-43 96-96V127.8c0-15.1-8.5-29-22.3-36.5z"/>
                     </svg>
                 </button>
-                <div id="opcoes-acessibilidade" class="hidden">
-                    <button id="aumentar-fonte" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" aria-label="Diminuir o tamanho da fonte">A-</button>
-                    <button id="alternar-contraste" aria-label="Alternar alto contraste">C</button>
+                <div id="opcoes-acessibilidade" class="hidden" role="menu">
+                    <button id="aumentar-fonte" aria-label="Aumentar o tamanho da fonte" role="menuitem">A+</button>
+                    <button id="diminuir-fonte" aria-label="Diminuir o tamanho da fonte" role="menuitem">A -</button>
+                    <button id="alternar-contraste" aria-label="Alternar alto contraste" role="menuitem">O</button>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                 <h2>A <span class="vought-title">Vought International</span> e o mundo de The Boys</h2>
                 <div class="serie-grid">
                     <article class="serie-card vought">
-                        <img src="The_Seven_Tower.webp" alt="Vought Tower, a sede da Vought International" loading="lazy">
+                        <img src="The_Seven_Tower.jpg" alt="Vought Tower, a sede da Vought International" loading="lazy">
                         <div class="descricao">
                             <h3>A Verdade sobre a Vought</h3>
                             <p>A <span class="vought-title">Vought International</span> é a mega-corporação que gerencia os super-heróis, transformando-os em ativos lucrativos. Por trás da fachada de marketing e caridade, a empresa esconde segredos sombrios, como a criação artificial de supers através do Composto V.</p>
@@ -85,7 +85,7 @@
                 <h2>Os <span class="grupo-the-seven">Sete</span></h2>
                 <div class="personagens-grid">
                     <article class="personagem-card homelander">
-                        <img src="homellander.webp" alt="Foto do Homelander" loading="lazy">
+                        <img src="homellander.jpg" alt="Foto do Homelander" loading="lazy">
                         <div class="descricao">
                             <h3><span class="nome-homelander">Homelander</span></h3>
                             <p>O líder dos Sete e o herói mais poderoso do mundo, com um segredo aterrorizante e uma personalidade psicopata.</p>
@@ -93,7 +93,7 @@
                     </article>
                     
                     <article class="personagem-card starlight">
-                        <img src="star.webp" alt="Foto da Starlight" loading="lazy">
+                        <img src="star.jpg" alt="Foto da Starlight" loading="lazy">
                         <div class="descricao">
                             <h3><span class="nome-starlight">Starlight</span></h3>
                             <p>Uma heroína idealista que descobre a verdade sobre a Vought e os Sete, tentando fazer a diferença por dentro.</p>
@@ -109,7 +109,7 @@
                     </article>
 
                     <article class="personagem-card a-train">
-                        <img src="trem bala.avif" alt="Foto do A-Train" loading="lazy">
+                        <img src="trem bala.jpg" alt="Foto do A-Train" loading="lazy">
                         <div class="descricao">
                             <h3><span class="nome-a-train">A-Train</span></h3>
                             <p>O velocista dos Sete, dependente de drogas para manter sua velocidade e lutando contra a pressão da Vought.</p>
@@ -148,7 +148,7 @@
                     </article>
                     
                     <article class="personagem-card mother-milk">
-                        <img src="LEITE.webp" alt="Foto do Mother's Milk" loading="lazy">
+                        <img src="LEITE.jpg" alt="Foto do Mother's Milk" loading="lazy">
                         <div class="descricao">
                             <h3><span class="nome-mother-milk">Mother's Milk</span></h3>
                             <p>O metódico e leal membro do grupo, responsável por planejar e analisar as operações de The Boys.</p>
@@ -156,7 +156,7 @@
                     </article>
                     
                     <article class="personagem-card frenchie">
-                        <img src="FRANÇES.webp" alt="Foto do Frenchie" loading="lazy">
+                        <img src="FRANÇES.jpg" alt="Foto do Frenchie" loading="lazy">
                         <div class="descricao">
                             <h3><span class="nome-frenchie">Frenchie</span></h3>
                             <p>Um especialista em armas e táticas, com um passado misterioso e uma amizade complexa com Kimiko.</p>
@@ -183,22 +183,7 @@
                 </form>
             </div>
         </section>
-
-        </section>
-            </div>
     </main>
-    <div id="acessibilidade-menu">
-        <button id="gaviao-btn" aria-label="Menu de Acessibilidade" aria-expanded="false">
-            <svg class="gaviao-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM294.5 100.2c-11.4-8-26.1-8.4-37.9-1.2l-64 38.4c-12.7 7.6-19.9 22.1-18.4 37.7S198.8 200 214.3 200H272c17.7 0 32-14.3 32-32s-14.3-32-32-32H240l28.5-17.1c6.5-3.9 14.3-3.6 20.5 .8s9.6 11.2 9.6 18.2V272c0 26.5-21.5 48-48 48H160c-17.7 0-32 14.3-32 32s14.3 32 32 32h80c53 0 96-43 96-96V127.8c0-15.1-8.5-29-22.3-36.5z"/>
-            </svg>
-        </button>
-        <div id="opcoes-acessibilidade" class="hidden">
-            <button id="aumentar-fonte" aria-label="Aumentar o tamanho da fonte">A+</button>
-            <button id="diminuir-fonte" aria-label="Diminuir o tamanho da fonte">A-</button>
-            <button id="alternar-contraste" aria-label="Alternar alto contraste">C</button>
-        </div>
-    </div>
 
     <footer class="site-footer">
         <div class="container">
